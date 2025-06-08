@@ -1,0 +1,2 @@
+reset
+set palette defined (0 "blue", 0.5 "white", 1 "red")

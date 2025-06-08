@@ -1,0 +1,12 @@
+    # Define a data block
+    gnuplot> $Mydata << EOD
+    11 22 33 #first line of data
+    44 55 66 #second line of data
+    # comments work just as in a data file
+    77 88 99
+    EOD
+    gnuplot>print $Mydata
+    11 22 33  
+    44 55 66  
+    77 88 99
+    gnuplot> p $MyData us 1:2 w lp
