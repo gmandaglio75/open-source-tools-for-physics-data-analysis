@@ -1,0 +1,14 @@
+reset
+unset key
+set sam 50
+set xrange[-25:25] ; set yrange[0:25]
+a=4. ; R=1.
+while (a>0) {
+   p sqrt(R**2-x**2) w lp lt R ps 3
+   R=R+1.
+   if (R==24.) { 
+   R=1.
+   a=a-1
+   } 
+   pause 0.2
+    }

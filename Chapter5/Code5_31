@@ -1,0 +1,12 @@
+gnuplot> print '1 2 3 4 5 bar  foo'
+1 2 3 4 5 bar  foo
+print sqrt(2.)
+1.4142135623731
+gnuplot> set print 'useless.dat' # redirect print to file
+gnuplot> print '1 2 3 4 5 bar  foo'
+gnuplot> print sqrt(2.)
+gnuplot> set print  # go back to standard output (screen)
+gnuplot> !cat useless.dat  # execute shell command 'cat'
+1 2 3 4 5 bar  foo 
+1.4142135623731
+gnuplot> 

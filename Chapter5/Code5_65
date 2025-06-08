@@ -1,0 +1,58 @@
+reset
+# Impostazione dei parametri
+dt = 0.001   # integration step
+kmax=10000
+g = -9.82
+# input data
+print 'Type inital velocity (m/s):'       # promt user for input
+V0 = system("read V0; echo $V0")          # input user choice
+print 'Type launch angle (deg): '         # promt user for input
+theta = system("read theta; echo $theta") # input user choice
+
+x0 = 0.
+y0 = 0.
+v0x=V0*cos(theta/180.*pi) 
+v0y=V0*sin(theta/180.*pi) 
+
+!rm gravity.txt  # clean existing file output
+set print 'gravity.txt' append
+print '#  Tempo(sec) , X(m) , Y(m), Vx(m/s), Vy(m/s), V(m/s) '
+
+do for[k=1:kmax] {
+    t=k*dt    
+    vy= v0y + g*dt
+    sy= (vy+v0y)/2*dt + y0  
+    sx= v0x*dt + x0
+    V=sqrt(v0x**2 + vy**2)
+# updating initial positions
+    v0y=vy
+    y0=sy
+    x0=sx
+# checking for ground contact    
+     if (y0 < 0) {
+        break   }
+# write formatted results on file        
+     print sprintf("%f %.10f %.10f %.10f %.10f %.10f", t, sx, sy, v0x, v0y, V)
+     tstop=t
+    }
+      
+set  print  # close output file and return to standard output
+# plot session
+set parametric  # to draw the exact solution
+x0 = 0.
+y0 = 0.
+v0x=V0*cos(theta/180.*pi) 
+v0y=V0*sin(theta/180.*pi) 
+X(t)= v0x*t + x0
+Y(t)= 1./2.*g*t**2 + v0y*t +y0
+set trange [0:tstop]
+set title 'Computed vs. calculated trajectory   V0= '.V0.'m/s  --  Theta= '.theta.'deg' # title will report used input value
+p 'gravity.txt' us 2:3 every 20 w p pt 4 t 'Computed', X(t),Y(t) w l t 'Calculated'  # every: skips points
+unset title
+set term x11 2          # open another plot window
+set size ratio 0.2      # set plot height/width ratio
+set ytics  auto 2e-11   # fix tics increment
+# draw the difference between computed and exact solution
+p 'gravity.txt' us 2:($3-Y($1)) ev 10 w i # mixed columns operations
+unset parametric
+set term x11 1  # restore first plot window

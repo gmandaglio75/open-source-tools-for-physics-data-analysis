@@ -1,0 +1,3 @@
+set hidden3d  #  set hid for short, to make solid figure
+R(x,y) = sqrt(x**2 + y**2)
+splot sin(R(x,y))/R(x,y) lc pal # line color palette

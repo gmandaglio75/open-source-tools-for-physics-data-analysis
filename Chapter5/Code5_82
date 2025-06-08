@@ -1,0 +1,9 @@
+reset
+set pm3d 
+set iso 20,20
+R(x,y) = sqrt(x**2 + y**2)
+splot sin(R(x,y))/R(x,y)  w l lw 2 lc 'black'
+pause -1 'Click to continue'
+unset pm3d
+set iso 100,100
+splot sin(R(x,y))/R(x,y)  w pm3d

@@ -1,0 +1,17 @@
+# Curve 0 of 1, 31 points
+# Curve title: "'bimodal_datas.dat' using (bin($1,binwidth))"
+# x y xlow xhigh type
+ 30  3  30  30  i
+ 35  5  35  35  i
+ 40  7  40  40  i
+ 45  23  45  45  i
+ 50  44  50  50  i
+ 55  42  55  55  i
+ 60  41  60  60  i
+ 65  38  65  65  i
+ 70  26  70  70  i
+ 75  16  75  75  i
+ 80  4  80  80  i
+ 85  3  85  85  i
+ 90  9  .........
+ ................

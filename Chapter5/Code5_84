@@ -1,0 +1,6 @@
+reset
+set pm3d at b
+set iso 50,50
+set hidden
+R(x,y) = sqrt(x**2 + y**2)
+splot sin(R(x,y))/R(x,y)  lc 'dark-gray' not

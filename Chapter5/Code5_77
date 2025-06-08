@@ -1,0 +1,12 @@
+reset
+stats 'Histo-Height.txt' u 2 name 'M' noout # nooutput quiet mode
+stats 'Histo-Height.txt' u 3 name 'F' noout
+set style data histogram
+set style fill solid border -1
+set style histogram cluster gap 1  
+set yr [-5:5] ; set xzeroaxis lt -1 lw 2 
+set xlabel 'Country'  font 'arial,20'
+set ylabel 'Deviation from Average Height'  font 'arial,20'
+Mtit=sprintf('Male Average height= %\%%3.1f ',M\_mean) #title string 
+Ftit=sprintf('Female Average height= %\%%3.1f ',F\_mean)
+plot 'Histo-Height.txt' u ($2-M_mean):xtic(1) t Mtit lc 'skyblue', '' u ($3-F_mean) t Ftit lc 'pink'

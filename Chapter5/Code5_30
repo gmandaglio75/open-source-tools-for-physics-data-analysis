@@ -1,0 +1,3 @@
+set table 'mycos.txt'   # create or overwrite the output file
+p [-8:- 6] 'cos.dat'    # [-8:- 6] fix the x range plot limits
+unset table             # return to standard output

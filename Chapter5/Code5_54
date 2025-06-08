@@ -1,0 +1,7 @@
+fitfun(x)= A(a)*sin(x*2*pi/T+b)*exp(-x/tau)
+# Restrict A in the range  [A_min:A_max]
+A(x) = (A_max-A_min)*(atan(x)+pi/2)/pi + A_min
+A_min= 0.5 # minimum value 
+A_max= 1.5 # maximum value 
+b=.00001 ; T=2. ; tau=8.
+fit fitfun(x) 'mydata.dat'  us 1:($2-$4) via a ,b,T, tau # note that now 'a' is the free parameter

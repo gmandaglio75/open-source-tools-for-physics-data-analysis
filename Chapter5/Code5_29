@@ -1,0 +1,5 @@
+set term png            # or any other graphic format
+set out 'myplot.png'    # whatever filename you want, with matching extension
+plot sin(x), 'cos.dat'  
+set out                 # return to standard output
+set term x11            # return to preferred terminal

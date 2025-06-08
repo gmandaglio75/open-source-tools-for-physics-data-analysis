@@ -1,0 +1,8 @@
+set key bottom left
+p 'mycos.txt' us 1:($2>0? $2:NaN) w lp # select only y>0
+rep 'mycos.txt' us 1:($1>0? $2/2:NaN) w lp # select only x>0 and plot y(x)/2
+
+reset
+set yrange [-1:1.2]
+p 'mycos.txt' us 1:($2>0? $2:NaN) w lp lc 'red' # select y>0 and plot them in red
+rep 'mycos.txt' us 1:($2<=0? $2:NaN) w lp lc 'blue' # select y<0 and plot them in blue

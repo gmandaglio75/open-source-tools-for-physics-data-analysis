@@ -1,0 +1,7 @@
+reset
+set view equal #  make a square graph window
+set view 0,90  #  for a top down projection
+unset key
+set iso 100,100
+R(x,y) = sqrt(x**2 + y**2)
+splot sin(R(x,y))/R(x,y)  w pm3d

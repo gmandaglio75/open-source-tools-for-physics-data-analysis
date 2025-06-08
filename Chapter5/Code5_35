@@ -1,0 +1,10 @@
+reset
+set size  square  # control the aspect ratio of plot window
+set xzeroaxis # draw y=0 axis
+set yzeroaxis # draw x=0 axis
+set key out   # set legend key outside the plot window
+set parametric
+set xrange[-5*pi:5*pi]
+set yrange[-5*pi:5*pi]
+plot[0:5*pi] t*cos(t), t*sin(t)  w lp # spiral 
+rep  5*pi*cos(t), 5*pi*sin(t) #circle of radius 2$\pi$

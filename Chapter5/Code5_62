@@ -1,0 +1,8 @@
+if (<condition>) { 
+       <commands>
+       <commands>
+} else { 
+       if (<condition>) { 
+            <commands>
+       }
+}

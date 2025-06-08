@@ -1,0 +1,11 @@
+set terminal aqua enhanced font "arial,18"
+set title 'Trigonometric function' offset screen -0.5 font "arial,22" textcolor rgb "blue"
+set zeroaxis linetype -1
+set grid
+set xlabel 'Angle (degrees)'
+set x2label 'Angle (radiants)'
+set ylabel 'Function values'
+set key box outside left
+set x2tic
+set format x2 '%.0P$\pi$'
+plot sin(x) title 'sin(x)', 'cos.dat' with points pointtype  15 title 'cos(x)'

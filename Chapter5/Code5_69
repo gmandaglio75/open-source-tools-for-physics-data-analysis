@@ -1,0 +1,8 @@
+STATS_correlation   # correlation coefficient between x and y
+STATS_slope         # A corresponding to a linear fit y = Ax + B
+STATS_slope_err     # uncertainty of A
+STATS_intercept     # B corresponding to a linear fit y = Ax + B
+STATS_intercept_err # uncertainty of B
+STATS_sumxy         # sum of x*y
+STATS_pos_min_y     # x coordinate of a point with minimum y 
+STATS_pos_max_y     # x coordinate of a point with maximum y 

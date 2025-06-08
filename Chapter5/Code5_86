@@ -1,0 +1,5 @@
+reset
+set pm3d
+splot "3D_blocks.txt" using 1:2:3 with lp  # lines and points
+# Or for palette colored surface with:
+splot "3D_blocks.txt" using 1:2:3 with pm3d  # filled surface

@@ -1,0 +1,1 @@
+p 'mydata.dat' w lp       # short for  using 1:2 with linepoint

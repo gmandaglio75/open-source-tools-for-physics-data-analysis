@@ -1,0 +1,6 @@
+reset
+unset key
+set surface  # default for splot
+set isosam 50,50     # equivalent of 'set sample' in 1D
+R(x,y) = sqrt(x**2 + y**2)
+splot sin(R(x,y))/R(x,y) 

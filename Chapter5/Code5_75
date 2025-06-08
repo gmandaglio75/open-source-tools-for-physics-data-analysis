@@ -1,0 +1,9 @@
+reset
+set style data histogram
+set boxwidth 0.9 relative # to leave a small gap among boxes
+set key out
+set style fill solid border -1
+set style histogram cluster 
+set style histogram rowstacked # ROWS AWARE
+unset ytic
+plot 'Histo-Height.txt' u 2:xtic(1) t 'Male', '' u 3 t 'Female'

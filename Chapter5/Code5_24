@@ -1,0 +1,12 @@
+gnuplot> array A[6]
+gnuplot> A[1] = 11
+gnuplot> A[2] = 2.0
+gnuplot> A[3] = {3.0, 1.0}
+gnuplot> A[4] = "Furs"
+gnuplot> A[6] = A[2]**2
+gnuplot> print A
+[11,2.0,{3.0, 1.0},"Furs",,4.0]
+gnuplot> array B[6] = [11,2.0,A[3],"Furs", ,B[2]**2] ; print B
+[11,2.0,{3.0, 1.0},"Furs",,4.0]
+gnuplot> print |A| , |B|
+6 6

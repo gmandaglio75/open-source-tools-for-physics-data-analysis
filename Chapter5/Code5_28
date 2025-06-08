@@ -1,0 +1,5 @@
+set title 'Trigonometric function' offset screen -0.5 font "arial,22" textcolor rgb "blue"
+set tit 'Trigonometric function' off sc -0.5 font "arial,22" tc rgb "blue"
+......
+plot sin(x) title 'sin(x)', 'cos.dat' with points pointtype  15 title 'cos(x)'
+plot sin(x) t 'sin(x)', 'cos.dat' w p pt 15 t 'cos(x)'

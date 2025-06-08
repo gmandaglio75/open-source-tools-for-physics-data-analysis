@@ -1,0 +1,3 @@
+set key opaque #  legend covering  lines
+set key box    #  framed legend
+p for [a= -10:10:2] a*x**2 t sprintf("%dx**2",a)

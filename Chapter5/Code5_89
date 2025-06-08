@@ -1,0 +1,2 @@
+splot '3D_Matrix_1.txt' matrix w pm3d
+splot '3D_Matrix_2.txt' matrix nonuniform w pm3d

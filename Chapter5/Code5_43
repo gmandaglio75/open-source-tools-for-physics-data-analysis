@@ -1,0 +1,3 @@
+set yrange [-1:1.5]  # to leave room for the legend (key)
+    p 'cos.dat', '' us 1:($2**2) w lp, '' us 1:($2/sin($1)) w l
+gnuplot> 

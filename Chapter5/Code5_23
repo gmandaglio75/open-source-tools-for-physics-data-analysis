@@ -1,0 +1,7 @@
+a={1,2}
+gnuplot> print real(a)
+1.0
+gnuplot> print imag(a)
+2.0
+gnuplot> print sqrt(-1)
+{0.0, 1.0}

@@ -1,0 +1,33 @@
+iter      chisq       delta/lim  lambda   A             b             T             tau          
+   0 1.6352111749e+00   0.00e+00  2.64e+00    1.00e+00   1.00e-05   2.000000e+00   8.000000e+00
+   1 6.7363051924e-01  -1.43e+05  2.64e-01    9.011870e-01   9.999997e-06   2.018395e+00   6.908587e+00
+   2 4.6606355338e-01  -4.45e+04  2.64e-02    9.845289e-01   9.999983e-06   2.032827e+00   4.837404e+00
+   3 4.2907295365e-01  -8.62e+03  2.64e-03    9.805141e-01   1.001316e-05   2.039973e+00   5.357003e+00
+   ..................
+   ..................
+   ..................
+   8 4.2490107485e-01   2.61e-11  2.64e+07    9.842117e-01   4.053820e-02   2.045222e+00   5.332201e+00
+   9 4.2490107485e-01   0.00e+00  2.64e+06    9.842117e-01   4.053820e-02   2.045222e+00   5.332201e+00
+iter      chisq       delta/lim  lambda   A             b             T             tau          
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.424901
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 95
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0668778
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00447264
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+A               = 0.984212         +/- 0.03739      (3.799%)
+b               = 0.0405382        +/- 0.04092      (100.9%)
+T               = 2.04522          +/- 0.007007     (0.3426%)
+tau             = 5.3322           +/- 0.2886       (5.412%)
+
+correlation matrix of the fit parameters:
+                A      b      T      tau    
+A               1.000 
+b              -0.113  1.000 
+T              -0.086  0.738  1.000 
+tau            -0.716  0.090  0.074  1.000 

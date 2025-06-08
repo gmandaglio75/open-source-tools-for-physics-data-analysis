@@ -1,0 +1,19 @@
+STATS_min          # minimum value of in-range data points
+STATS_max          # maximum value of in-range data points
+STATS_index_min    # index i for which data[i] == STATS_min
+STATS_index_max    # index i for which data[i] == STATS_max
+STATS_lo_quartile  # value of the lower (1st) quartile boundary
+STATS_median       # median value
+STATS_up_quartile  # value of the upper (3rd) quartile boundary
+STATS_mean         # mean value of the in-range data points
+STATS_ssd          # sample standard deviation (in-range data)
+STATS_stddev       # population standard dev. (in-range data)
+STATS_sum          # sum
+STATS_sumsq        # sum of squares
+STATS_skewness     # skewness of the in-range data points
+STATS_kurtosis     # kurtosis of the in-range data points
+STATS_adev         # mean absolute deviation (in-range data)
+STATS_mean_err     # standard error of the mean value
+STATS_stddev_err   # standard error of the standard deviation
+STATS_skewness_err # standard error of the skewness
+STATS_kurtosis_err # standard error of the kurtosis

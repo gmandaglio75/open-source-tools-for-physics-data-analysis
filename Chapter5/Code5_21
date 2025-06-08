@@ -1,0 +1,13 @@
+gnuplot> !ls -l
+total 7768
+-rw-r--r--  1 ulderico  staff    16661 May 27 16:57 DataSet.odg
+-rw-r--r--@ 1 ulderico  staff    17808 May 27 16:57 DataSet.pdf
+-rw-r--r--  1 ulderico  staff    34283 Sep 13 17:46 Figure 0.pdf
+-rw-r--r--@ 1 ulderico  staff    34859 Sep 13 17:47 Gnu_atan.pdf
+-rw-r--r--@ 1 ulderico  staff    40414 May 23 22:27 Gnuplot1.png
+-rw-r--r--@ 1 ulderico  staff     9205 May 26 19:59 Mydata.png
+-rw-r--r--@ 1 ulderico  staff      826 Aug 28 12:35 cascade.gpl
+-rw-r--r--@ 1 ulderico  staff     9402 Aug 28 12:38 cascade.png
+-rw-r--r--@ 1 ulderico  staff    20306 Aug 25 11:07 cos2.png
+%\dotfill %
+%\dotfill %

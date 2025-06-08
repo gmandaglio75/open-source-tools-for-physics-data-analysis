@@ -1,0 +1,5 @@
+set samples 500  # increase sampled points
+set parametric
+unset key
+set trange  [-2*pi:2*pi] # define range for t
+plot sin(2*t), cos(3*t)  # plot Lissajous figure

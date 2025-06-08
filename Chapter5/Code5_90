@@ -1,0 +1,7 @@
+reset
+set xrange [-10:10]
+set ytics 10 nomirror tc lt 1 # tic color is that of line type
+set ylabel 'Quadratic'  
+set y2tics 200 nomirror  tc 'blue' # tic color user defined
+set y2label 'Cubic'  
+plot x**2 linetype 1, x**3  lc 'blue' axes x1y2 

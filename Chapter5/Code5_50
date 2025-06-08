@@ -1,0 +1,3 @@
+fit fitfun(x) 'mydata.dat'  us 1:($2-$4) via A,b,T, tau # execute the fit with all parameters free
+...........
+p fitfun(x), '' us 1:($2-$4) # plot fit result and experimental data

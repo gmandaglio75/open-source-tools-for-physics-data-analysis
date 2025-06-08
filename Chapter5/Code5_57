@@ -1,0 +1,1 @@
+plot for [sample in "A B C"] "Test-".sample.".dat"

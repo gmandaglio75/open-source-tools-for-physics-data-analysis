@@ -1,0 +1,4 @@
+do for [iteration-spec] {  # curly brackets on do line
+     commands
+     commands
+}           # closing loop

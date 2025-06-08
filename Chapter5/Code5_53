@@ -1,0 +1,18 @@
+reset
+#BOTTOM PLOT
+set sam 200 # to sample plotted functions with 200 points
+set multi
+set origin 0,0
+set size 1,0.2
+set border 1+2+8 # 1= bottom, 2= left, 4=top, 8=right 
+set xtics nomirror # avoid mirroring x tics on x2 axis
+set ytics  0.1 # fix y tics interval
+p 'mydata.dat' us 1:(($2 -$4)-fitfun($1)) w i lt 3 lw 3 not # residuals plotted with impulses line width 3  and no title
+
+#TOP PLOT
+set size 1,0.8
+set border 14 # =2+4+8 (left+top+right)
+unset xtics
+set origin 0,0.2
+p 'mydata.dat' us 1:($2 -$4) pt 6, fitfun(x), NaN t 'residues' , A*exp(-x/tau) # plot data, fitted function , 'nothing' but with a title in the key and the exponential part of the fitting function
+unset multi

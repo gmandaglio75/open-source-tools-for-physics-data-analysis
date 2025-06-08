@@ -1,0 +1,6 @@
+fitfun(x)= A*sin(x*2*pi/T+b)*exp(-x/tau)
+A=1.
+b=.00001
+T=2.
+tau=8.
+p 'mydata.dat' us 1:($2-$4), fitfun(x) # comparing guess function with experiment minus background

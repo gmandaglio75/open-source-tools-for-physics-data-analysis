@@ -1,0 +1,8 @@
+reset
+set style data histogram
+set style fill solid border -1
+set style histogram cluster gap 2 # gap is optional
+set yr [0:]
+set xlabel 'Country'  font 'arial,20'
+set ylabel 'Average Height (cm)'  font 'arial,20'
+plot 'Histo-Height.txt' u 2:xtic(1) t 'Male' lc 'skyblue','' u 3 t 'Female' lc 'pink'

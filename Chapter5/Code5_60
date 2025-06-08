@@ -1,0 +1,19 @@
+reset
+set sample 200
+unset key
+set xtics nomirror ; set ytics nomirror
+lor(x,w)=w/(w**2 + x**2) # lorentzian function definition
+set multi
+set yrange [0:2]
+set border 1+2 # plot only bottom x1 an y1 axes
+w= 0.5 ; dx= 0. ; dy=0.
+
+#p lor(x,w) lc "red"
+do for [COL in "blue green dark-yellow orange red"] { 
+     p lor(x,w) w filledcurve fs transparent solid 0.2 lc rgb COL  
+     w=w*1.4        # increase the width a bit
+     dx= dx+0.05 ; dy=dy+0.05
+     set origin dx,dy # shift the origin a bit
+}  
+unset multi
+reset

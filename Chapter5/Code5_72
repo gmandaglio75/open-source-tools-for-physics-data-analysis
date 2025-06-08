@@ -1,0 +1,8 @@
+reset
+set datafile separator ',' # since we have comma separated values
+set style data histogram
+set boxwidth 3     # default is 2
+set style fill solid border -1  # -1 is a solid line on most terminal
+set xlabel 'Lifetime (hours)'  font 'arial,20'
+set ylabel 'Tested lamps'  font 'arial,20'
+plot 'Histo-Lamp.txt' u 2:xtic(1) t 'NEON' lc 'blue','' u 3 t 'BULB' lc 'red'

@@ -1,0 +1,6 @@
+STATS_records      # total number of in-range data records (N)
+STATS_outofrange   # number of records filtered out by range limits
+STATS_invalid      # number of invalid/incomplete/missing records
+STATS_blank        # number of blank lines in the file
+STATS_blocks       # number of indexable blocks of data in the file
+STATS_columns      # number of data columns in the first row of data

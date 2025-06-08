@@ -1,0 +1,8 @@
+reset
+binwidth = 5
+bin(x,width) = width * floor(x / width)
+set boxwidth binwidth     # Match boxwidth to binwidth
+set style fill solid 0.5  # Half transparent filling
+set xlabel "Data Value" font 'arial,20'
+set ylabel "Frequency"  font 'arial,20'
+plot 'bimodal_datas.dat' using (bin($1,binwidth)) smooth freq with boxes

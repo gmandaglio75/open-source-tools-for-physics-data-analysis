@@ -1,0 +1,17 @@
+ reset               # unset previous settings 
+    set multi           # short form of multiplot 
+# BOTTOM
+    set size 1.0,0.5    # full orizontal width and half vertical heigh 
+    set origin 0.0,0.0  # reduntant (default values)
+    p 'mydata.dat' w lp, '' us 1:2:3 w err, '' us 1:4 w l
+# TOP LEFT
+    set origin 0.0,0.5
+    set size 0.5,0.5   # half orizontal width and vertical heigh 
+    set yrange [-1:1.5]  # to have room for the legend (key)
+    p 'cos.dat', '' us 1:($2**2) w lp, '' us 1:($2/sin($1)) w l 
+    unset yrange
+# TOP RIGHT
+    set origin 0.5,0.5
+    p [-8:- 6]  'cos.dat' pt 5 #  
+    unset multi
+    reset

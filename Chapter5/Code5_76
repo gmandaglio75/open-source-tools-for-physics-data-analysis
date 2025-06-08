@@ -1,0 +1,8 @@
+reset
+set style data histogram
+set boxwidth 0.9 relative # to leave a small gap among boxes
+set style fill solid border -1
+set style histogram cluster  
+set style histogram columnstacked # COLUMNS AWARE
+unset ytic
+plot 'Histo-Height.txt' using 2:key(1), '' using 3:xtic(4) # note the use of key and xtic

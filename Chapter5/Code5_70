@@ -1,0 +1,3 @@
+stats 'datafile' using N name 'whatyoulike' # N = column number 
+stats 'datafile' using N name columnheader 
+do for [COL=5:8] {stats 'datafile' using COL name columnheader}

@@ -1,0 +1,8 @@
+gnuplot> print 3+2
+5
+gnuplot> print exp(42)
+1.7392749415205e+18
+gnuplot> print 3/2
+1
+gnuplot> print 3./2
+1.5 
